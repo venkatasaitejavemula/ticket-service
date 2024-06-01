@@ -4,7 +4,7 @@ const {
   getTicketById,
   updateTicketById,
   createTicket,
-} = require("../controller/ticket.controller");
+} = require("../Controller/ticket.controller");
 
 const ticketRouter = express.Router();
 
