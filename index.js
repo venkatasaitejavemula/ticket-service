@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const ticketRouter = require("./routes/ticket.route");
+const ticketRouter = require("./Routes/ticket.route");
+
 const app = express();
 
 app.use(express.json());
