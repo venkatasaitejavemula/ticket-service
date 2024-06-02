@@ -19,12 +19,15 @@ const TicketsSchema = mongoose.Schema(
     },
     createdBy: {
       type: String,
+      ref: 'Users',
     },
     lastUpdatedBy: {
       type: String,
+      ref: 'Users',
     },
     assignee: {
       type: String,
+      ref: 'Users',
     },
     status: {
       type: String,

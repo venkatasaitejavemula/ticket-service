@@ -35,7 +35,6 @@ const updateTicketById = async (req, res) => {
 };
 
 const deleteTicket = async (req, res) => {
-  console.log("entered");
   try {
     const { isDeleteAll } = req.body;
     if (isDeleteAll) {

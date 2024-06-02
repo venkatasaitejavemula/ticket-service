@@ -17,6 +17,6 @@ ticketRouter.get("/find-ticket/:id", getTicketById);
 
 ticketRouter.put("/update-ticket/:id", updateTicketById);
 
-ticketRouter.delete("/delete-ticket/:id", deleteTicket);
+ticketRouter.delete("/delete-ticket", deleteTicket);
 
 module.exports = ticketRouter;

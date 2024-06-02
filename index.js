@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const ticketRouter = require("./Routes/ticket.route");
+const userRouter = require("./Routes/user.route");
 
 const app = express();
 
@@ -19,6 +20,8 @@ app.use(corsMiddleware);
 app.use(express.json());
 
 app.use("/api/ticket", ticketRouter);
+
+app.use("/api/user", userRouter);
 
 mongoose
   .connect(
