@@ -4,8 +4,6 @@ const ticketRouter = require("./Routes/ticket.route");
 
 const app = express();
 
-app.use(express.json());
-
 const corsMiddleware = (req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
@@ -18,13 +16,15 @@ const corsMiddleware = (req, res, next) => {
 
 app.use(corsMiddleware);
 
+app.use(express.json());
+
 app.use("/api/ticket", ticketRouter);
 
 mongoose
   .connect(
     "mongodb+srv://saiteja8906:LZE2v4oO2bB9iQec@jiradb.154itxh.mongodb.net/?retryWrites=true&w=majority&appName=JiraDB"
   )
-  .then(() => console.log("Connected!"))
-  .catch(() => console.log("Connection Error"));
+  .then(() => console.log("DB Connected!"))
+  .catch(() => console.log("DB Connection Error!"));
 
 app.listen(3001);

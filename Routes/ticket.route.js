@@ -4,6 +4,7 @@ const {
   getTicketById,
   updateTicketById,
   createTicket,
+  deleteTicket,
 } = require("../Controller/ticket.controller");
 
 const ticketRouter = express.Router();
@@ -15,5 +16,7 @@ ticketRouter.get("/findAll", getAllTickets);
 ticketRouter.get("/find-ticket/:id", getTicketById);
 
 ticketRouter.put("/update-ticket/:id", updateTicketById);
+
+ticketRouter.delete("/delete-ticket/:id", deleteTicket);
 
 module.exports = ticketRouter;
